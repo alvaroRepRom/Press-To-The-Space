@@ -19,8 +19,11 @@ public class GoalMenuUI : MonoBehaviour
         gameObject.SetActive(true);
         winUI.SetActive(hasWin);
         loseUI.SetActive(!hasWin);
-        int result = (int)heightAchived;
-        resultsUI.text = result.ToString();
+
+        float rest = heightAchived % 10;
+        heightAchived /= 10;
+        int integer = (int)heightAchived;
+        resultsUI.text = "Height: " + integer.ToString() + "," + (int)rest + " km";
     }
 
     public void ResetGame() => SceneManager.LoadScene(SceneManager.GetActiveScene().name);
