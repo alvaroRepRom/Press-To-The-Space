@@ -36,6 +36,7 @@ public class HeightMeterUI : MonoBehaviour
         {
             bool winCondition = playerMaxHeight >= goalHeight;
             onGoals?.Invoke(winCondition, winCondition ? goalHeight : playerMaxHeight);
+            flyPlayerScript.StopPlayer();
             enabled = false;
         }
     }

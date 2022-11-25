@@ -46,4 +46,10 @@ public class Fly : MonoBehaviour
         if (currentFlyTime > flyTime)
             ResetFly();
     }
+
+    public void StopPlayer()
+    {
+        rb.velocity = Vector2.zero;
+        rb.gravityScale = 0f;
+    }
 }

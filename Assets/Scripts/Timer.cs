@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 
     public UnityEvent onTimeUp;
 
-    private void Update()
+    private void FixedUpdate()
     {
         timer += Time.deltaTime; 
         if (timer >= time)

@@ -8,5 +8,6 @@ public class SectionActivation : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         onTrigger?.Invoke();
+        Destroy(this);
     }
 }
