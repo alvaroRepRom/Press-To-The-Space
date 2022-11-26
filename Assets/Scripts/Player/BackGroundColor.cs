@@ -6,6 +6,7 @@ public class BackGroundColor : MonoBehaviour
     [SerializeField] private HeightMeterUI heightMeter;
     [SerializeField] private Color startColor;
     [SerializeField] private Color endColor;
+
     private SpriteRenderer sprite;
 
     private void Awake() => sprite = GetComponent<SpriteRenderer>();
@@ -14,6 +15,6 @@ public class BackGroundColor : MonoBehaviour
     private Color ColorGradient()
     {
         float t = flyPlayerScript.PlayerHeight / heightMeter.MaxHeight;
-        return Color.Lerp(startColor, endColor, t);
+        return Color.Lerp(startColor, endColor, t); // linear interpolation between colors
     }
 }

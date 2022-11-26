@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class CloudsMove : MonoBehaviour
 {
-    [SerializeField] private float leftWallDistance = -10f;
-    [SerializeField] private float rightWallDistance = 10f;
     [SerializeField] private float speed;
     [SerializeField] private bool goRight;
 
+    private float leftWallDistance = -10f;
+    private float rightWallDistance = 10f;
     private Vector2 direction;
 
     private void Start() => direction = goRight ? Vector2.right : Vector2.left;

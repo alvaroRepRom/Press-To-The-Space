@@ -10,9 +10,12 @@ public class Fly : MonoBehaviour
     private float currentFlyTime;
     private bool canFly;
 
+    #region Properties
+    // public getters
     public bool CanFly => canFly;
     public float FlyTimeLeft => currentFlyTime / flyTime;
     public float PlayerHeight => transform.position.y;
+    #endregion
 
     private void Awake() => rb = GetComponent<Rigidbody2D>();
     private void Start() => ResetFly();

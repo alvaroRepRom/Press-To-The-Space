@@ -8,6 +8,7 @@ public class CloudsSectionManager : MonoBehaviour
 
     public void ActivationSequence()
     {
+        // There is no need of a Condition statment because the number of sections are controlled
         actualSection++;
         sections[actualSection].SetActive(true);
         sections[actualSection - 1].SetActive(false);
